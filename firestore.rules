@@ -1,0 +1,13 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // مجموعة users: أي حد يقدر يقرأ ويكتب (عشان المستخدمين يظهروا في الأدمن والتطبيق يكتب نقاطهم)
+    match /users/{userId} {
+      allow read, write: if true;
+    }
+    // أي مجموعات تانية (challenges, tips...) لو موجودة
+    match /{document=**} {
+      allow read, write: if true;
+    }
+  }
+}

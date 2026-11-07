@@ -1,0 +1,24 @@
+{
+    "name": "دعوة - رفيقك الإيماني اليومي",
+    "short_name": "دعوة",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0B1F3A",
+    "lang": "ar",
+    "scope": "/",
+    "description": "تطبيق إسلامي شامل للصلوات، القرآن الكريم، الأذكار والعبادات اليومية بالهوية البصرية لشركة bedigital",
+    "theme_color": "#0B1F3A",
+    "dir": "rtl",
+    "icons": [
+        {
+            "src": "/favicon.svg",
+            "sizes": "192x192",
+            "type": "image/svg+xml"
+        },
+        {
+            "src": "/favicon.svg",
+            "sizes": "512x512",
+            "type": "image/svg+xml"
+        }
+    ]
+}

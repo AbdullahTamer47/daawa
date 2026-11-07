@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <!-- Background Midnight Navy with sharp pixel corners -->
+  <rect width="128" height="128" fill="#0B1F3A" stroke="#16365C" stroke-width="4" />
+  
+  <!-- Stepped Islamic Arch / Mihrab Frame (bedigital 2-unit stroke language) -->
+  <path
+    d="M32 104 V56 H40 V40 H48 V28 H56 V20 H72 V28 H80 V40 H88 V56 H96 V104"
+    stroke="#FFFFFF"
+    stroke-width="8"
+    stroke-linecap="square"
+    stroke-linejoin="miter"
+    fill="none"
+  />
+
+  <!-- Stepped Minaret Cap / Beacon in Signal Teal -->
+  <path d="M60 12 H68 V20 H60 Z" fill="#0FB5AE" />
+
+  <!-- Central Radiant Gold Nuqta (45° Diamond) -->
+  <polygon points="64,52 76,64 64,76 52,64" fill="#E0A526" />
+
+  <!-- Teal Digital Accent Baseline -->
+  <rect x="40" y="88" width="48" height="8" fill="#0FB5AE" />
+
+  <!-- Base Platform Step in White -->
+  <line x1="24" y1="104" x2="104" y2="104" stroke="#FFFFFF" stroke-width="8" stroke-linecap="square" />
+
+  <!-- Signature Pixel Dissolve Trail -->
+  <rect x="100" y="24" width="8" height="8" fill="#0FB5AE" />
+  <rect x="108" y="32" width="8" height="8" fill="#0FB5AE" opacity="0.6" />
+</svg>

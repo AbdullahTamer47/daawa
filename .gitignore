@@ -1,0 +1,54 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Production Build Output
+dist/
+build/
+
+# Environment Variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+firebase-debug.log*
+firebase-debug.*.log*
+
+# Editor & OS files
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.idea/
+.vscode/
+
+# Temporary / Scratch Files
+*.txt
+*_dump.json
+*.timestamp*
+.dsh-office*
+migrate*.js
+check_users.js
+transform-challenges.js
+mp3quran.json
+quran_rec*.json
+r.json
+rec.json
+
+# Firebase & Temp
+.firebase/
+.dataconnect/
+scratch/
+.gemini/

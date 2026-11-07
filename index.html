@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#0B1F3A" />
+    <meta name="description" content="تطبيق دعوة - رفيقك الإيماني اليومي لمواقيت الصلاة الدقيقة، القرآن الكريم، الأذكار والعبادات بالهوية البصرية الرقمية لشركة bedigital" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- bedigital Brand Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Noto+Kufi+Arabic:wght@400;500;600;700;800;900&family=Silkscreen:wght@400;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+    <title>دعوة | رفيقك الإيماني اليومي</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script>
+        // 1. Auto-reload when a new service worker takes over (autoUpdate)
+        if ('serviceWorker' in navigator) {
+            let refreshing = false;
+            navigator.serviceWorker.addEventListener('controllerchange', function () {
+                if (refreshing) return;
+                refreshing = true;
+                window.location.reload();
+            });
+        }
+
+        // 2. Handle missing chunk errors (Vite) by forcing a hard reload
+        window.addEventListener('error', function (e) {
+            const isModuleError = e.message && e.message.toLowerCase().includes('failed to fetch dynamically imported module');
+            const isScriptError = e.target && e.target.nodeName === 'SCRIPT';
+            if (isModuleError || isScriptError) {
+                if (!sessionStorage.getItem('app-reloaded-once')) {
+                    sessionStorage.setItem('app-reloaded-once', 'true');
+                    window.location.reload(true);
+                }
+            }
+        }, true);
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>
