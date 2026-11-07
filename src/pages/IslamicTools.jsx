@@ -501,7 +501,7 @@ export default function IslamicTools() {
                             alignItems: 'center',
                         }}
                     >
-                        <h2 style={{ font: 'var(--text-headline-sm)', margin: '0 0 var(--space-3)', color: 'var(--bd-white)' }}>
+                        <h2 style={{ font: 'var(--text-headline-sm)', margin: '0 0 var(--space-3)', color: 'var(--color-on-surface)' }}>
                             {selectedDhikr}
                         </h2>
 
@@ -621,7 +621,7 @@ export default function IslamicTools() {
                                         {d.category}
                                     </span>
                                 </div>
-                                <p style={{ font: 'var(--text-body-lg)', lineHeight: 1.8, margin: 'var(--space-2) 0', color: 'var(--bd-white)' }}>
+                                <p style={{ font: 'var(--text-body-lg)', lineHeight: 1.8, margin: 'var(--space-2) 0', color: 'var(--color-on-surface)' }}>
                                     "{d.arabic}"
                                 </p>
                                 <div className="flex-between mt-3" style={{ borderTop: '1px solid var(--color-outline-variant)', paddingTop: 'var(--space-2)' }}>

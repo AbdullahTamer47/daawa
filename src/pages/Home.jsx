@@ -212,6 +212,34 @@ export default function Home() {
                             <span>·</span>
                             <span style={{ color: 'var(--bd-gold)', fontWeight: 600 }}>{hijriInfo.formattedArabic}</span>
                         </div>
+                        {state.userId && (
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginTop: '2px' }}>
+                                <button
+                                    onClick={() => {
+                                        navigator.clipboard.writeText(state.userId);
+                                        setCopiedContent('user_code');
+                                        setTimeout(() => setCopiedContent(null), 2000);
+                                    }}
+                                    style={{
+                                        background: 'rgba(245, 184, 56, 0.12)',
+                                        border: '1px solid var(--bd-gold)',
+                                        padding: '1px 6px',
+                                        cursor: 'pointer',
+                                        display: 'inline-flex',
+                                        alignItems: 'center',
+                                        gap: '4px',
+                                        fontSize: '0.65rem',
+                                        fontFamily: 'var(--font-pixel)',
+                                        color: 'var(--bd-gold)',
+                                        borderRadius: '0px'
+                                    }}
+                                    title="كود الدخول الخاص بك (انقر للنسخ)"
+                                >
+                                    <Icon name={copiedContent === 'user_code' ? 'done' : 'vpn_key'} size={11} color="var(--bd-gold)" />
+                                    <span>كودك: {state.userId} {copiedContent === 'user_code' && '✓'}</span>
+                                </button>
+                            </div>
+                        )}
                     </div>
                 </div>
 
@@ -676,7 +704,7 @@ export default function Home() {
                             </button>
                         </div>
                     </div>
-                    <p style={{ margin: 0, font: 'var(--text-body-md)', lineHeight: 1.7, color: 'var(--bd-white)' }}>
+                    <p style={{ margin: 0, font: 'var(--text-body-md)', lineHeight: 1.7, color: 'var(--color-on-surface)' }}>
                         "{activeHadith}"
                     </p>
                 </div>
@@ -698,7 +726,7 @@ export default function Home() {
                             </button>
                         </div>
                     </div>
-                    <p style={{ margin: 0, font: 'var(--text-body-md)', lineHeight: 1.7, color: 'var(--bd-white)' }}>
+                    <p style={{ margin: 0, font: 'var(--text-body-md)', lineHeight: 1.7, color: 'var(--color-on-surface)' }}>
                         "{activeDua}"
                     </p>
                 </div>

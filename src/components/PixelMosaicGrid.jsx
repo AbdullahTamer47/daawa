@@ -59,7 +59,7 @@ export default function PixelMosaicGrid() {
             {/* Header with Switcher */}
             <div className="flex-between mb-4">
                 <div>
-                    <h2 style={{ font: 'var(--text-title-lg)', margin: 0, display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--bd-white)' }}>
+                    <h2 style={{ font: 'var(--text-title-lg)', margin: 0, display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--color-on-surface)' }}>
                         <Icon name="insights" size={24} color="var(--bd-teal)" />
                         لوحة الفسيفساء الإيمانية (365 يوماً)
                     </h2>

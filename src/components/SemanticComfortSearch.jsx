@@ -224,7 +224,7 @@ export default function SemanticComfortSearch() {
                             </div>
                         </div>
 
-                        <p style={{ font: 'var(--text-headline-sm)', lineHeight: 1.8, margin: 0, color: 'var(--bd-white)', fontFamily: "'Noto Kufi Arabic', serif" }}>
+                        <p style={{ font: 'var(--text-headline-sm)', lineHeight: 1.8, margin: 0, color: 'var(--color-on-surface)', fontFamily: "'Noto Kufi Arabic', serif" }}>
                             «{selectedEntry.verse.text}»
                         </p>
                     </div>
@@ -244,7 +244,7 @@ export default function SemanticComfortSearch() {
                                 <Icon name={copiedField === 'hadith' ? 'done' : 'content_copy'} size={16} color={copiedField === 'hadith' ? 'var(--bd-gold)' : 'currentColor'} />
                             </button>
                         </div>
-                        <p style={{ font: 'var(--text-body-md)', lineHeight: 1.7, margin: 0, color: 'var(--bd-white)' }}>
+                        <p style={{ font: 'var(--text-body-md)', lineHeight: 1.7, margin: 0, color: 'var(--color-on-surface)' }}>
                             {selectedEntry.hadith}
                         </p>
                     </div>
@@ -264,7 +264,7 @@ export default function SemanticComfortSearch() {
                                 <Icon name={copiedField === 'dua' ? 'done' : 'content_copy'} size={16} color={copiedField === 'dua' ? 'var(--bd-teal)' : 'currentColor'} />
                             </button>
                         </div>
-                        <p style={{ font: 'var(--text-body-md)', fontWeight: 600, lineHeight: 1.7, margin: 0, color: 'var(--bd-white)' }}>
+                        <p style={{ font: 'var(--text-body-md)', fontWeight: 600, lineHeight: 1.7, margin: 0, color: 'var(--color-on-surface)' }}>
                             "{selectedEntry.dua}"
                         </p>
                     </div>
@@ -274,7 +274,7 @@ export default function SemanticComfortSearch() {
                         <div style={{ font: 'var(--text-label-md)', fontWeight: 700, color: 'var(--bd-gold)', marginBottom: '4px' }}>
                             بصيرة عملية:
                         </div>
-                        <div style={{ font: 'var(--text-body-sm)', color: 'var(--bd-white)', lineHeight: 1.6 }}>
+                        <div style={{ font: 'var(--text-body-sm)', color: 'var(--color-on-surface)', lineHeight: 1.6 }}>
                             {selectedEntry.advice}
                         </div>
                     </div>

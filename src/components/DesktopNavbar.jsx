@@ -16,6 +16,7 @@ export default function DesktopNavbar() {
     const navigate = useNavigate();
     const location = useLocation();
     const { state, dispatch } = useApp();
+    const [copiedId, setCopiedId] = React.useState(false);
 
     const prayerStreak = state.prayerStreak || 0;
     const quranStreak = state.quranStreak || 0;
@@ -197,7 +198,7 @@ export default function DesktopNavbar() {
                         />
                     </button>
 
-                    {/* User Greeting & Logout */}
+                    {/* User Greeting & Recovery Code Pill */}
                     {state.userName && (
                         <div
                             style={{
@@ -208,15 +209,45 @@ export default function DesktopNavbar() {
                                 paddingRight: 'var(--space-3)',
                             }}
                         >
-                            <span
-                                style={{
-                                    font: 'var(--text-body-sm)',
-                                    color: 'var(--bd-white)',
-                                    fontWeight: 600,
-                                }}
-                            >
-                                {state.userName}
-                            </span>
+                            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+                                <span
+                                    style={{
+                                        font: 'var(--text-body-sm)',
+                                        color: 'var(--color-on-surface)',
+                                        fontWeight: 700,
+                                        lineHeight: 1.2,
+                                    }}
+                                >
+                                    {state.userName}
+                                </span>
+                                {state.userId && (
+                                    <button
+                                        onClick={() => {
+                                            navigator.clipboard.writeText(state.userId);
+                                            setCopiedId(true);
+                                            setTimeout(() => setCopiedId(false), 2000);
+                                        }}
+                                        title="كود الدخول الخاص بك (انقر للنسخ)"
+                                        style={{
+                                            background: 'rgba(245, 184, 56, 0.12)',
+                                            border: '1px solid var(--bd-gold)',
+                                            padding: '1px 6px',
+                                            cursor: 'pointer',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            gap: '4px',
+                                            fontSize: '0.65rem',
+                                            fontFamily: 'var(--font-pixel)',
+                                            color: 'var(--bd-gold)',
+                                            marginTop: '3px',
+                                        }}
+                                    >
+                                        <Icon name={copiedId ? 'done' : 'vpn_key'} size={11} color="var(--bd-gold)" />
+                                        <span>كودك: {state.userId} {copiedId && '✓'}</span>
+                                    </button>
+                                )}
+                            </div>
+
                             <button
                                 onClick={() => {
                                     if (confirm('هل تريد تسجيل الخروج؟')) {
@@ -241,3 +272,4 @@ export default function DesktopNavbar() {
         </header>
     );
 }
+

@@ -49,7 +49,7 @@ export default function Statistics() {
                 <h2 style={{ font: 'var(--text-headline-sm)', color: 'var(--bd-gold)', margin: 'var(--space-1) 0' }}>
                     {currentLevel.name}
                 </h2>
-                <p style={{ font: 'var(--text-title-md)', fontWeight: 700, color: 'var(--bd-white)', margin: 0 }}>
+                <p style={{ font: 'var(--text-title-md)', fontWeight: 700, color: 'var(--color-on-surface)', margin: 0 }}>
                     {state.totalPoints} نقطة
                 </p>
 
@@ -64,6 +64,75 @@ export default function Statistics() {
                 <p style={{ font: 'var(--text-label-sm)', color: 'var(--bd-teal-300)', marginTop: 'var(--space-2)', opacity: 0.9 }}>
                     {currentLevel.max === Infinity ? 'أعلى مستوى مبارك!' : `${Math.max(0, currentLevel.max - state.totalPoints)} نقطة للارتقاء إلى المستوى التالي`}
                 </p>
+            </div>
+
+            {/* Account Profile & 6-Digit Recovery Code Card */}
+            <div
+                className="card mb-5"
+                style={{
+                    background: 'var(--color-surface)',
+                    border: '1.5px solid var(--bd-teal)',
+                    padding: 'var(--space-4)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    flexWrap: 'wrap',
+                    gap: 'var(--space-3)',
+                }}
+            >
+                <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-3)' }}>
+                    <div
+                        style={{
+                            width: '42px',
+                            height: '42px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            background: 'rgba(245, 184, 56, 0.15)',
+                            border: '1px solid var(--bd-gold)',
+                        }}
+                    >
+                        <Icon name="account_circle" size={24} color="var(--bd-gold)" />
+                    </div>
+                    <div>
+                        <div style={{ font: 'var(--text-title-sm)', fontWeight: 700, color: 'var(--color-on-surface)' }}>
+                            {state.userName || 'المستخدم'}
+                        </div>
+                        <div style={{ font: 'var(--text-body-sm)', color: 'var(--bd-slate)', fontSize: '0.78rem' }}>
+                            كود الدخول المخصص لحسابك (احفظه للدخول من أي جهاز)
+                        </div>
+                    </div>
+                </div>
+
+                {state.userId && (
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        <span
+                            style={{
+                                font: 'var(--text-pixel)',
+                                fontSize: '1.2rem',
+                                fontWeight: 800,
+                                color: 'var(--bd-gold)',
+                                background: 'rgba(245, 184, 56, 0.1)',
+                                border: '1.5px dashed var(--bd-gold)',
+                                padding: '4px 12px',
+                                letterSpacing: '3px',
+                            }}
+                        >
+                            {state.userId}
+                        </span>
+                        <button
+                            onClick={() => {
+                                navigator.clipboard.writeText(state.userId);
+                                alert(`تم نسخ كود الدخول الخاص بك: ${state.userId}`);
+                            }}
+                            className="btn btn-outlined"
+                            style={{ padding: '6px 12px', fontSize: '0.8rem', fontWeight: 700 }}
+                        >
+                            <Icon name="content_copy" size={14} color="var(--bd-teal)" />
+                            <span>نسخ الكود</span>
+                        </button>
+                    </div>
+                )}
             </div>
 
             {/* Annual 365-Day Pixel Mosaic Grid & Minaret */}

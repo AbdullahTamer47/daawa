@@ -8,10 +8,10 @@
   /* Core Brand Colors */
   --bd-navy:   #0B1F3A;  /* Midnight Navy - primary dark */
   --bd-teal:   #0FB5AE;  /* Signal Teal - primary accent */
-  --bd-gold:   #E0A526;  /* Nuqta Gold - signature accent (once per layout) */
+  --bd-gold:   #F5B838;  /* Nuqta Gold - vibrant accent */
   --bd-white:  #FFFFFF;  /* Paper White */
   --bd-mist:   #F2F6F8;  /* Pixel Mist - light background */
-  --bd-slate:  #5C6A7C;  /* Slate - captions/muted */
+  --bd-slate:  #94A3B8;  /* High-contrast crisp slate for dark mode */
 
   /* Teal Ramp (from logo pixels) */
   --bd-teal-900: #0C4C5D;
@@ -23,16 +23,16 @@
   --bd-teal-200: #B7E9E7;
 
   /* UI on Dark */
-  --bd-border-dark: #3A5578;
-  --bd-card-dark:   #102A4A;
-  --bd-surface-dark: #0D1B33;
-  --bd-surface-elevated: #142844;
+  --bd-border-dark: #274770;  /* Crisp visible border */
+  --bd-card-dark:   #0F243E;  /* High-contrast card surface */
+  --bd-surface-dark: #0B1F3A;
+  --bd-surface-elevated: #163255;
 
   /* Semantic UI Colors (mapped to brand) */
   --color-primary: var(--bd-teal);
   --color-primary-hover: var(--bd-teal-400);
   --color-primary-container: var(--bd-teal-900);
-  --color-on-primary: var(--bd-white);
+  --color-on-primary: #FFFFFF;
   --color-on-primary-container: var(--bd-teal-200);
 
   --color-secondary: var(--bd-gold);
@@ -56,15 +56,15 @@
 
   /* Surface & Background */
   --color-background: var(--bd-navy);
-  --color-on-background: var(--bd-white);
-  --color-surface: var(--bd-surface-dark);
-  --color-on-surface: var(--bd-white);
+  --color-on-background: #FFFFFF;
+  --color-surface: var(--bd-card-dark);
+  --color-on-surface: #FFFFFF;
   --color-surface-variant: var(--bd-surface-elevated);
-  --color-on-surface-variant: var(--bd-teal-300);
-  --color-surface-container: var(--bd-card-dark);
-  --color-surface-container-high: #1A3558;
+  --color-on-surface-variant: #CBD5E1;
+  --color-surface-container: #132D4C;
+  --color-surface-container-high: #1B3B63;
   --color-outline: var(--bd-border-dark);
-  --color-outline-variant: #2D4A73;
+  --color-outline-variant: #1E3758;
 
   /* Inverse */
   --color-inverse-surface: var(--bd-white);
@@ -141,43 +141,44 @@
 
 /* ── bedigital Light Mode (Brand Guidelines Crisp Ice / Mist Theme) ── */
 [data-theme="light"], body.theme-light {
-  --color-background: #F4F7FB;
+  --color-background: #F8FAFC;
   --color-on-background: #0B1F3A;
   --color-surface: #FFFFFF;
   --color-on-surface: #0B1F3A;
-  --color-surface-variant: #E8EEF5;
-  --color-on-surface-variant: #425870;
-  --color-surface-container: #EEF4FA;
-  --color-surface-container-high: #E2ECF5;
-  --color-outline: #CAD8E6;
-  --color-outline-variant: #D5E1ED;
+  --color-surface-variant: #F1F5F9;
+  --color-on-surface-variant: #334E68;
+  --color-surface-container: #F1F5F9;
+  --color-surface-container-high: #E2E8F0;
+  --color-outline: #CBD5E1;
+  --color-outline-variant: #E2E8F0;
 
   --color-text: #0B1F3A;
-  --color-text-dim: #5A6D82;
+  --color-text-dim: #475569;
   --color-surface-card: #FFFFFF;
-  --border-color: #CAD8E6;
+  --border-color: #CBD5E1;
 
   --bd-navy: #0B1F3A;
-  --bd-white: #FFFFFF;
-  --bd-slate: #5A6D82;
-  --bd-teal: #0D827D;
-  --bd-teal-300: #0FB5AE;
-  --bd-teal-200: #88DFDC;
-  --bd-teal-900: #E0EFF2;
+  --bd-white: #0B1F3A; /* In light mode, any text with bd-white resolves to dark navy, avoiding invisible text */
+  --bd-slate: #475569; /* Crisp readable slate */
+  --bd-teal: #0D766E;  /* High contrast teal for white surfaces */
+  --bd-teal-300: #0F766E;
+  --bd-teal-200: #14B8A6;
+  --bd-teal-900: #CCFBF1;
+  --bd-gold: #B45309;  /* High-contrast amber-gold for light mode */
   --bd-card-dark: #FFFFFF;
   --bd-surface-dark: #FFFFFF;
-  --bd-surface-elevated: #EEF4FA;
-  --bd-border-dark: #CAD8E6;
+  --bd-surface-elevated: #F1F5F9;
+  --bd-border-dark: #CBD5E1;
 
-  --color-primary: #0D827D;
+  --color-primary: #0D766E;
   --color-on-primary: #FFFFFF;
-  --color-primary-container: #E0F2F1;
-  --color-on-primary-container: #004D40;
+  --color-primary-container: #CCFBF1;
+  --color-on-primary-container: #115E59;
 
-  --elevation-1: 3px 3px 0 #CAD8E6;
-  --elevation-2: 4px 4px 0 #CAD8E6;
-  --elevation-3: 6px 6px 0 #B9CADA;
-  --elevation-4: 8px 8px 0 #A8BFD3;
+  --elevation-1: 3px 3px 0 #CBD5E1;
+  --elevation-2: 4px 4px 0 #CBD5E1;
+  --elevation-3: 6px 6px 0 #94A3B8;
+  --elevation-4: 8px 8px 0 #64748B;
 }
 
 /* ═══════════════════════════════════════════════
@@ -336,7 +337,8 @@ ul, ol { list-style: none; }
 /* ── Cards (Pixel Glassmorphism) ── */
 .card {
   background: var(--color-surface);
-  border: 1px solid var(--color-outline);
+  border: 1.5px solid var(--color-outline);
+  color: var(--color-on-surface);
   border-radius: var(--shape-lg);
   padding: var(--space-4);
   box-shadow: var(--elevation-1);
@@ -350,7 +352,8 @@ ul, ol { list-style: none; }
 
 .card-elevated {
   background: var(--color-surface-container);
-  border: 1px solid var(--color-outline);
+  border: 1.5px solid var(--color-outline);
+  color: var(--color-on-surface);
   border-radius: var(--shape-lg);
   padding: var(--space-4);
   box-shadow: var(--elevation-2);
@@ -358,7 +361,8 @@ ul, ol { list-style: none; }
 
 .card-glow {
   background: linear-gradient(135deg, var(--color-surface-container) 0%, var(--color-surface) 100%);
-  border: 1px solid var(--color-primary);
+  border: 1.5px solid var(--color-primary);
+  color: var(--color-on-surface);
   border-radius: var(--shape-xl);
   padding: var(--space-5);
   box-shadow:
